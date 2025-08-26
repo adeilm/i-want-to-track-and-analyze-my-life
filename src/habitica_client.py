@@ -1,6 +1,9 @@
 import os
+import logging
 import requests
 from dotenv import load_dotenv
+
+logger = logging.getLogger(__name__)
 
 class HabiticaClient:
     """
@@ -29,11 +32,11 @@ class HabiticaClient:
             dict: A dictionary containing the user's tasks, or None if an error occurs.
         """
         try:
-            response = requests.get(f"{self.base_url}/tasks/user", headers=self.headers)
+            response = requests.get(f"{self.base_url}/tasks/user", headers=self.headers, timeout=30)
             response.raise_for_status()  # Raise an exception for bad status codes
             return response.json()
         except requests.exceptions.RequestException as e:
-            print(f"An error occurred: {e}")
+            logger.error(f"Habitica get_tasks error: {e}")
             return None
 
 if __name__ == "__main__":
@@ -42,27 +45,24 @@ if __name__ == "__main__":
     HABITICA_USER_ID = os.getenv("HABITICA_USER_ID")
     HABITICA_API_TOKEN = os.getenv("HABITICA_API_TOKEN")
 
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
+
     if not HABITICA_USER_ID or not HABITICA_API_TOKEN:
-        print("Error: HABITICA_USER_ID and HABITICA_API_TOKEN must be set in a .env file.")
+        logger.error("HABITICA_USER_ID and HABITICA_API_TOKEN must be set in a .env file.")
     else:
         client = HabiticaClient(HABITICA_USER_ID, HABITICA_API_TOKEN)
         tasks_data = client.get_tasks()
 
-        if tasks_data:
-            print("Successfully fetched tasks:")
-            # Print the number of tasks of each type
-            if tasks_data.get("success"):
-                tasks = tasks_data.get("Database", [])
-                habits = [task for task in tasks if task.get("type") == "habit"]
-                dailies = [task for task in tasks if task.get("type") == "daily"]
-                todos = [task for task in tasks if task.get("type") == "todo"]
-                rewards = [task for task in tasks if task.get("type") == "reward"]
-                print(f"  - Habits: {len(habits)}")
-                print(f"  - Dailies: {len(dailies)}")
-                print(f"  - Todos: {len(todos)}")
-                print(f"  - Rewards: {len(rewards)}")
-            else:
-                print("Request was not successful.")
-                print(tasks_data)
+        if tasks_data and tasks_data.get("success"):
+            logger.info("Successfully fetched tasks:")
+            tasks = tasks_data.get("data", [])
+            habits = [task for task in tasks if task.get("type") == "habit"]
+            dailies = [task for task in tasks if task.get("type") == "daily"]
+            todos = [task for task in tasks if task.get("type") == "todo"]
+            rewards = [task for task in tasks if task.get("type") == "reward"]
+            logger.info(f"  - Habits: {len(habits)}")
+            logger.info(f"  - Dailies: {len(dailies)}")
+            logger.info(f"  - Todos: {len(todos)}")
+            logger.info(f"  - Rewards: {len(rewards)}")
         else:
-            print("Failed to fetch tasks.")
+            logger.error("Failed to fetch tasks or request was not successful.")
