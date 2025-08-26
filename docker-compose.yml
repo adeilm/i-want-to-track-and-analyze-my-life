@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: iwttaaml:latest
+    container_name: life-tracker
+    env_file:
+      - .env
+    volumes:
+      # Persist outputs locally; you can sync this folder with Google Drive using Drive for desktop
+      - ./DataBase:/app/DataBase
+    command: ["python", "src/process_data.py"]
+

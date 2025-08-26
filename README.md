@@ -109,10 +109,33 @@ You can now use the generated CSV files to create dashboards and visualizations.
   - Batch writes / streaming CSV for large exports
   - Incremental updates to avoid reprocessing unchanged items
 
-## Contributing
+## Running with Docker / Compose
 
-- Use Python 3.10+
-- Keep functions documented with docstrings
-- Prefer small, focused pull requests
-- Add or update tests for processing logic
-- Run linters/formatters if configured
+You can run the exporter in a container.
+
+### Build and run
+
+```sh
+# Build the image
+docker compose build
+
+# Run once to export CSVs
+docker compose run --rm tracker
+
+# Or start the service (same result here since it exits when done)
+docker compose up --build
+```
+
+- Outputs will be written to the `./DataBase` folder on your host via a bind mount.
+- Environment variables are loaded from `.env`.
+
+### Storing Data for Power BI
+
+Power BI needs access to the CSVs. Recommended options:
+- Local folder synced to Google Drive using "Drive for desktop". Point the volume to that path in `docker-compose.yml`, e.g.:
+  ```yaml
+  volumes:
+    - "C:/Users/YourUser/Google Drive/My Data/LifeDB:/app/DataBase"
+  ```
+- A GitHub repo is not ideal for large/constantly changing CSVs. Use it for code; use a synced local folder (Drive/Dropbox/OneDrive) for data.
+- In Power BI, connect to the local path that is synced by your cloud drive client.
