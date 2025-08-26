@@ -58,12 +58,13 @@ def main():
         tasks = tasks_data.get("data", [])
 
         # Create data directory if it doesn't exist
-        if not os.path.exists('data'):
-            os.makedirs('data')
+        data_dir = 'DataBase'
+        if not os.path.exists(data_dir):
+            os.makedirs(data_dir)
 
-        process_and_save_tasks(tasks, 'habit', r'C:\Users\HP\DALI\Personal Project\i-want-to-track-and-analyze-my-life\DataBase\habits.csv')
-        process_and_save_tasks(tasks, 'daily', r'C:\Users\HP\DALI\Personal Project\i-want-to-track-and-analyze-my-life\DataBase\dailies.csv')
-        process_and_save_tasks(tasks, 'todo', r'C:\Users\HP\DALI\Personal Project\i-want-to-track-and-analyze-my-life\DataBase\todos.csv')
+        process_and_save_tasks(tasks, 'habit', os.path.join(data_dir, 'habits.csv'))
+        process_and_save_tasks(tasks, 'daily', os.path.join(data_dir, 'dailies.csv'))
+        process_and_save_tasks(tasks, 'todo', os.path.join(data_dir, 'todos.csv'))
 
         # We can also save rewards if needed
         # process_and_save_tasks(tasks, 'reward', 'data/rewards.csv')

@@ -52,7 +52,7 @@ if __name__ == "__main__":
             print("Successfully fetched tasks:")
             # Print the number of tasks of each type
             if tasks_data.get("success"):
-                tasks = tasks_data.get("data", [])
+                tasks = tasks_data.get("Database", [])
                 habits = [task for task in tasks if task.get("type") == "habit"]
                 dailies = [task for task in tasks if task.get("type") == "daily"]
                 todos = [task for task in tasks if task.get("type") == "todo"]

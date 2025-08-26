@@ -32,3 +32,47 @@ Habitica Automation & Power BI Roadmap
    * Add predictive analytics (habit streak predictions, completion trends).
    * Add reminders/notifications via email or messaging apps.
    * Open-source project on GitHub with README, roadmap, and example dashboard screenshots.
+I understand. You want all the Habitica data extracted in a format that's ready to be entered into the Habitica mobile app, without any code.
+
+Here's the complete Habitica data organized for easy mobile entry:
+
+### Food & Treats
+- Favorite coffee/teax from café [8 gold] - Special café visit vs home brew
+- Chocolate bar/sweet treat [5 gold] - Small indulgence
+- Dessert/ice cream [10 gold] - Cake, premium ice cream
+- Order takeout/delivery [20 gold] - Skip cooking night
+- Try new restaurant [35 gold] - Special dining experience
+- Lazy hour snacking [12 gold] - Guilt-free munchies
+
+### Entertainment & Digital
+- 1 hour guilt-free gaming [8 gold] - Video games/mobile games
+- Watch movie/series episode [10 gold] - New movie or binge session
+- Buy a book/audiobook [15 gold] - Something you want to read
+- Premium app/subscription (1 month) [25 gold] - Spotify, Netflix, etc.
+- Go to movies/event [40 gold] - Theater, concert, etc.
+- Buy game/digital content [30 gold] - New game or DLC
+
+### Self-Care & Relaxation
+- 30 min guilt-free nap [6 gold] - Afternoon rest without guilt
+- Long bath/shower [5 gold] - Extended relaxing soak
+- Lazy morning/sleep in [10 gold] - No alarm weekend morning
+- Massage/spa treatment [50 gold] - Professional relaxation
+- New skincare/beauty product [18 gold] - Treat yourself item
+- Comfortable clothing item [25 gold] - Cozy pajamas, soft shirt
+
+### Hobbies & Activities
+- Craft supplies/hobby materials [20 gold] - Art supplies, DIY materials
+- Small gadget/tool you want [30 gold] - Under $30 useful item
+- Day trip/mini adventure [45 gold] - Local exploration
+- Social activity with friends [35 gold] - Planned fun activity
+- Workout gear/equipment [40 gold] - Fitness motivation item
+- Major purchase you've wanted [100 gold] - $50+ item you've been saving for
+
+### Time & Freedom
+- Skip one chore today [8 gold] - Dishes, laundry, etc. - do tomorrow
+- Hire help for task [25 gold] - Cleaning service, food delivery
+- Take mental health day [30 gold] - Skip non-essential commitments
+- Spontaneous purchase freedom [15 gold] - Buy something under $20 impulsively
+- Extend deadline by one day [12 gold] - Give yourself breathing room
+
+You can now use this organized list to manually enter these tasks into your Habitica mobile app. For best results, I recommend starting with just a few habits and dailies initially, then gradually adding more as you build consistency.

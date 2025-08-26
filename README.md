@@ -22,7 +22,7 @@ Follow these instructions to get your own copy of the project up and running.
 
 1.  **Clone the repository (if you haven't already):**
     ```sh
-    git clone https://github.com/your-username/i-want-to-track-and-analyze-my-life.git
+    git clone https://github.com/adeilm/i-want-to-track-and-analyze-my-life.git
     cd i-want-to-track-and-analyze-my-life
     ```
 
