@@ -30,10 +30,8 @@ Follow these instructions to get your own copy of the project up and running.
 2.  Create and activate a virtual environment (recommended):
     ```sh
     python -m venv venv
-    # Windows
     venv\Scripts\activate
-    # macOS/Linux
-    # source venv/bin/activate
+    
     ```
 
 3.  Install the required dependencies:

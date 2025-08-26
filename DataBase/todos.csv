@@ -1,4 +1,4 @@
-id,text,notes,priority,createdAt,updatedAt,completed,date
-efba6ede-2627-46fa-a0bc-f3da3a3fc9a4,Update my resume and LinkedIn profile ,,1,2025-08-26T17:04:16.070Z,2025-08-26T17:04:16.070Z,False,
-116a3245-1f8f-45bf-8bf7-6ca60b9b1368,Complete known certification ( google deep min oracle),,1,2025-08-26T17:03:46.101Z,2025-08-26T17:03:46.101Z,False,2026-01-01T17:02:45.001Z
-f893fe72-9fc8-4166-baf7-6a20c3af2f57,Translate ur documents ,,1,2025-08-26T17:02:16.711Z,2025-08-26T17:02:38.912Z,False,2025-11-01T17:02:18.237Z
+id,text,notes,priority,createdAt,updatedAt,type,completed,date
+efba6ede-2627-46fa-a0bc-f3da3a3fc9a4,Update my resume and LinkedIn profile ,,1,2025-08-26T17:04:16.070Z,2025-08-26T17:04:16.070Z,todo,False,
+116a3245-1f8f-45bf-8bf7-6ca60b9b1368,Complete known certification ( google deep min oracle),,1,2025-08-26T17:03:46.101Z,2025-08-26T17:03:46.101Z,todo,False,2026-01-01T17:02:45.001Z
+f893fe72-9fc8-4166-baf7-6a20c3af2f57,Translate ur documents ,,1,2025-08-26T17:02:16.711Z,2025-08-26T17:02:38.912Z,todo,False,2025-11-01T17:02:18.237Z
