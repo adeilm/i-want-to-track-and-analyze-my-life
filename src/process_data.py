@@ -61,9 +61,9 @@ def main():
         if not os.path.exists('data'):
             os.makedirs('data')
 
-        process_and_save_tasks(tasks, 'habit', 'data/habits.csv')
-        process_and_save_tasks(tasks, 'daily', 'data/dailies.csv')
-        process_and_save_tasks(tasks, 'todo', 'data/todos.csv')
+        process_and_save_tasks(tasks, 'habit', r'C:\Users\HP\DALI\Personal Project\i-want-to-track-and-analyze-my-life\DataBase\habits.csv')
+        process_and_save_tasks(tasks, 'daily', r'C:\Users\HP\DALI\Personal Project\i-want-to-track-and-analyze-my-life\DataBase\dailies.csv')
+        process_and_save_tasks(tasks, 'todo', r'C:\Users\HP\DALI\Personal Project\i-want-to-track-and-analyze-my-life\DataBase\todos.csv')
 
         # We can also save rewards if needed
         # process_and_save_tasks(tasks, 'reward', 'data/rewards.csv')
