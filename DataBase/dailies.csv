@@ -1,8 +1,8 @@
 id,text,notes,priority,createdAt,updatedAt,type,streak,completed
-b5054467-1aa0-4794-a361-e4bfdac0ec75,Eat homemade lunch and dinner ,,1,2025-08-26T16:58:32.024Z,2025-08-26T16:58:32.024Z,daily,0,False
-caa59d23-f3a4-4158-827d-2353bd623f62,Gym workout session ,,1,2025-08-26T16:58:05.580Z,2025-08-26T16:58:05.580Z,daily,0,False
-67682857-76a5-4b2f-9209-89101c142e65,Log today's expenses in tracker ,,1,2025-08-26T16:57:04.294Z,2025-08-26T16:57:04.294Z,daily,0,False
-f093cf8b-364b-47ee-8b11-20585d004496,Study 2.5h with breaks,,1,2025-08-26T16:56:21.317Z,2025-08-26T16:56:21.317Z,daily,0,False
-ff59e0f3-a469-4d14-aeaa-9937d1b32761, Work on main project,,1,2025-08-26T11:19:29.216Z,2025-08-26T11:20:01.949Z,daily,0,False
-7a232271-bcd6-4fe5-9dcf-8df2f35ea98e,Review daily goals/plan,,1,2025-08-26T11:17:24.172Z,2025-08-26T11:17:58.193Z,daily,0,False
-bfd104b6-b264-4dde-b363-5af9a11ba3d9,Spend at least 15 min on side project,,1,2025-08-26T09:53:52.572Z,2025-08-26T09:53:52.572Z,daily,0,False
+b5054467-1aa0-4794-a361-e4bfdac0ec75,Eat homemade lunch and dinner ,,1,2025-08-26T16:58:32.024Z,2025-08-27T11:38:43.817Z,daily,0,False
+caa59d23-f3a4-4158-827d-2353bd623f62,Gym workout session ,,1,2025-08-26T16:58:05.580Z,2025-08-27T11:38:43.803Z,daily,0,False
+67682857-76a5-4b2f-9209-89101c142e65,Log today's expenses in tracker ,,1,2025-08-26T16:57:04.294Z,2025-08-27T11:38:43.801Z,daily,0,False
+f093cf8b-364b-47ee-8b11-20585d004496,Study 2.5h with breaks,,1,2025-08-26T16:56:21.317Z,2025-08-27T11:38:43.799Z,daily,0,False
+ff59e0f3-a469-4d14-aeaa-9937d1b32761, Work on main project,,1,2025-08-26T11:19:29.216Z,2025-08-27T11:38:43.797Z,daily,0,False
+7a232271-bcd6-4fe5-9dcf-8df2f35ea98e,Review daily goals/plan,,1,2025-08-26T11:17:24.172Z,2025-08-27T11:38:43.796Z,daily,0,False
+bfd104b6-b264-4dde-b363-5af9a11ba3d9,Spend at least 15 min on side project,,1,2025-08-26T09:53:52.572Z,2025-08-27T11:38:43.785Z,daily,0,False
