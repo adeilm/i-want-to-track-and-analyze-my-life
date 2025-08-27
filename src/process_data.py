@@ -24,7 +24,20 @@ class HabiticaClient:
             "x-api-key": api_token,
             "x-client": "i-want-to-track-and-analyze-my-life-app"
         }
-
+        self.logger = logging.getLogger(__name__)
+        
+    def get_user(self):
+        """
+        Get user data from Habitica API
+        """
+        try:
+            response = requests.get(f"{self.base_url}/user", headers=self.headers, timeout=30)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            self.logger.error(f"Failed to fetch user data: {e}")
+            return None
+    
     def get_tasks(self):
         """
         Fetches all tasks for the user.
@@ -37,9 +50,8 @@ class HabiticaClient:
             response.raise_for_status()  # Raise an exception for bad status codes
             return response.json()
         except requests.exceptions.RequestException as e:
-            logger.error(f"Habitica get_tasks error: {e}")
+            self.logger.error(f"Habitica get_tasks error: {e}")
             return None
-
 if __name__ == "__main__":
     load_dotenv()
 
@@ -204,7 +216,7 @@ def main():
             logging.error(tasks_data)
 
     # Fetch and save user profile (stats and achievements)
-    user_data = client.get_user() if 'client' in locals() else None
+    user_data = client.get_user()  # This should work now
     if user_data and user_data.get("success"):
         data_dir = 'DataBase'
         if not os.path.exists(data_dir):
