@@ -135,7 +135,7 @@ Power BI needs access to the CSVs. Recommended options:
 - Local folder synced to Google Drive using "Drive for desktop". Point the volume to that path in `docker-compose.yml`, e.g.:
   ```yaml
   volumes:
-    - "C:/Users/YourUser/Google Drive/My Data/LifeDB:/app/DataBase"
+    - "C:/Users/Dali/Google Drive/My Data/LifeDB:/app/DataBase"
   ```
 - A GitHub repo is not ideal for large/constantly changing CSVs. Use it for code; use a synced local folder (Drive/Dropbox/OneDrive) for data.
 - In Power BI, connect to the local path that is synced by your cloud drive client.
